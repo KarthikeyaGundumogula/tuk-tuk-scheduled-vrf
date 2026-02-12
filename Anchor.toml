@@ -6,13 +6,13 @@ resolution = true
 skip-lint = false
 
 [programs.localnet]
-tuk_tuk_scheduled_vrf = "CHgyiwT8WLErryk6TEQZw98Q47k13CsZo89N2QuJTzxL"
+tuk_tuk_scheduled_vrf = "hS5bMz3KJtAfN5fHsXn8HGsNt64diPwPzCeyHLbo8jZ"
 
 [registry]
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "localnet"
+cluster = "devnet"
 wallet = "~/.config/solana/id.json"
 
 [scripts]

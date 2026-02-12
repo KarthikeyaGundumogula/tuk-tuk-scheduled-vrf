@@ -1,3 +1,4 @@
+#![allow(deprecated)]
 pub mod instructions;
 pub mod state;
 
@@ -6,10 +7,10 @@ use anchor_lang::prelude::*;
 pub use instructions::*;
 pub use state::*;
 
-declare_id!("CHgyiwT8WLErryk6TEQZw98Q47k13CsZo89N2QuJTzxL");
+declare_id!("hS5bMz3KJtAfN5fHsXn8HGsNt64diPwPzCeyHLbo8jZ");
 
 #[program]
-pub mod er_vrf {
+pub mod tuk_tuk_scheduled_vrf {
     use super::*;
 
     pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
@@ -25,5 +26,9 @@ pub mod er_vrf {
         ctx.accounts.callback(randomness)?;
         Ok(())
     }
-}
 
+    pub fn schedule(ctx: Context<Schedule>, task_id: u16, client_seed: u8) -> Result<()> {
+        ctx.accounts.schedule(task_id, ctx.bumps, client_seed)?;
+        Ok(())
+    }
+}
