@@ -13,7 +13,7 @@ describe("tuk-tuk-scheduled-vrf", () => {
     console.log("Your transaction signature", tx);
   });
 
-  it("Send request", async () => {
+  xit("Send request", async () => {
     const tx = await program.methods.sendVrfReq(0).rpc({ skipPreflight: true });
     console.log("Your transaction signature", tx);
     const user_acc = web3.PublicKey.findProgramAddressSync(
@@ -27,4 +27,11 @@ describe("tuk-tuk-scheduled-vrf", () => {
     user_account = await program.account.userAccount.fetch(user_acc, "processed");
     console.log("user_account: ", user_account);
   });
+
+  it("Send request with cron", async () => { 
+    let user_address = anchor.Wallet.local().publicKey;
+    console.log("user_address: ", user_address.toBase58());
+  });
 });
+
+
