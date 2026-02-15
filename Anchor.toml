@@ -17,4 +17,4 @@ wallet = "~/.config/solana/id.json"
 
 [scripts]
 test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 \"tests/**/*.ts\""
-cron = "yarn run ts-node cron/cron.ts --cronName tuktuk-counter-cron --queueName vrf-Queue --walletPath ~/.config/solana/id.json --rpcUrl https://api.devnet.solana.com"
+cron = "yarn run ts-node cron/cron.ts --cronName vrf-cron --queueName vrf-Queue --walletPath ~/.config/solana/id.json --rpcUrl https://api.devnet.solana.com"

@@ -13,7 +13,7 @@ describe("tuk-tuk-scheduled-vrf", () => {
     console.log("Your transaction signature", tx);
   });
 
-  xit("Send request", async () => {
+  it("Send request", async () => {
     const tx = await program.methods.sendVrfReq(0).rpc({ skipPreflight: true });
     console.log("Your transaction signature", tx);
     const user_acc = web3.PublicKey.findProgramAddressSync(
